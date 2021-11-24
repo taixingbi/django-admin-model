@@ -10,6 +10,8 @@ from django.views.generic import TemplateView
 urlpatterns = [
     path('', views.Home.as_view(), name='home'),
     path('admin/', admin.site.urls),
+
+    path('api/test', views.Api.test, name='test'),
 ]
 
 if settings.DEBUG:

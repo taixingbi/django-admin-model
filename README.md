@@ -11,21 +11,21 @@ pip install -r requirements.txt
 
 ### run migrate
 ##### packaging up your model changes
+del all __pycache__ and mydatabase
 ```
-python manage.py makemigrations 
-```
-
-##### applying those to your database.
-```
-python manage.py migrate --run-syncdb 
+python manage.py makemigrations model
+python manage.py migrate
 ```
 
 ##### create supersuer
 ```
-python manage.py createsupersuer
+python manage.py createsuperuser
 ```
 
 ### run local
 ```
 python manage.py runserver 0.0.0.0:8083
 ```
+
+
+
