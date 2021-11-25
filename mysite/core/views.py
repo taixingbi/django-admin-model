@@ -1,6 +1,5 @@
 from django.views.generic import TemplateView
 from django.http import JsonResponse
-from model.log import LogCrud
 from datetime import datetime
 
 # views

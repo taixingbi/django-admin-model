@@ -1,21 +1,5 @@
 import os
 
-# logging
-# import logging
-# import logging.config
-
-#env
-import environ
-env = environ.Env(
-    # set casting, default value
-    DEBUG=(bool, False)
-)
-# reading .env file
-environ.Env.read_env( './.env' )
-
-# False if not in os.environ
-DEBUG = env('DEBUG')
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -37,8 +21,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'mysite.core',
-    'model',
-    'rest_framework'
 ]
 
 APSCHEDULER_DATETIME_FORMAT = "N j, Y, f:s a"
@@ -84,21 +66,12 @@ TEMPLATES = [
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/2.1/ref/settings/#databases
-
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': 'mydatabase',
     }
 }
-
-
-# Password validation
-# https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
-
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -169,16 +142,6 @@ MEDIA_URL = '/media/'
 # path
 CUR_DIR = os.getcwd()
 
-# AUDIO_DIR= os.path.join(CUR_DIR, 'media/audio.wav')
-# TEST_DIR= os.path.join(CUR_DIR, 'media/test.wav')
-
-
-#-------------------------------- .env ------------------------------------
-# django sending mail
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_USE_TLS = True
-EMAIL_PORT = 587
 
 
 

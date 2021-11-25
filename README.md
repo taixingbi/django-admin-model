@@ -9,22 +9,17 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-### run migrate
 ##### packaging up your model changes
-del all __pycache__ and mydatabase
 ```
-python manage.py makemigrations model
+python manage.py makemigrations
 python manage.py migrate
 ```
 
-##### create supersuer
-```
-python manage.py createsuperuser
-```
 
 ### run local
 ```
 python manage.py runserver 0.0.0.0:8083
+python manage.py runserver --noreload
 ```
 
 
